@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Блог · Една Истина</title>
+<meta name="description" content="Статиите на Една Истина — подредени като пътека на осъзнаване: енергията, Любовта и Страха, волята, душата и кармата. Четива-медитации на български.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Montserrat:wght@400;500;600;700&display=swap&subset=cyrillic,cyrillic-ext,latin" rel="stylesheet">
+<link rel="stylesheet" href="edna.css">
+<style>
+  /* само компонентите, специфични за страницата-списък (останалото е в edna.css) */
+  .bloglist-head{text-align:center;padding:64px 0 10px}
+  .bloglist-head .section-label{margin-bottom:14px}
+  .bloglist-intro{font-family:'Lora',serif;font-style:italic;font-size:clamp(17px,2.2vw,20px);color:var(--ink-soft);line-height:1.55;max-width:640px;margin:0 auto 8px}
+  .bloglist{max-width:900px;margin:0 auto;padding:26px 24px 30px}
+  .bloglist .blog-filters{justify-content:center;margin:26px 0 18px}
+  .list-post{display:grid;grid-template-columns:64px 170px 1fr auto;gap:18px;align-items:baseline;padding:26px 0;border-bottom:1px solid var(--line)}
+  .list-post.featured{padding:40px 0 34px}
+  .list-num{font-family:'Lora',serif;font-style:italic;font-weight:500;font-size:22px;color:var(--gold-deep)}
+  .list-post .post-title{font-size:clamp(1.1rem,1.8vw,1.4rem)}
+  .list-post.featured .post-title{font-size:clamp(1.4rem,2.3vw,1.9rem)}
+  .list-start{display:inline-block;margin-left:10px;font-family:'Montserrat';font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#3a2c04;background:linear-gradient(180deg,var(--gold-bright),var(--gold));border-radius:30px;padding:4px 12px;vertical-align:middle}
+  @media(max-width:680px){.list-post{grid-template-columns:44px 1fr;gap:6px 14px}.list-post .post-cat,.list-post .post-meta{grid-column:2;text-align:left}}
+</style>
+</head>
+<body>
+
+<button id="back-to-top" aria-label="Нагоре" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+<div class="bg-lotus" aria-hidden="true"></div>
+
+<nav id="navbar">
+  <div class="nav-inner">
+    <a href="index.html#path" class="nav-link">Нашият път</a>
+    <a href="blog.html" class="nav-link">Блог</a>
+    <a href="index.html#youtube" class="nav-link">YouTube</a>
+    <a href="index.html" class="nav-logo-wrap"><img src="images/logo.png" alt="Една Истина"></a>
+    <a href="index.html#inspiration" class="nav-link">Вдъхновение</a>
+    <a href="index.html#about" class="nav-link">За мен</a>
+    <a href="https://konsultacii.ednaistina.bg" class="nav-link ext" target="_blank" rel="noopener">Консултации ↗</a>
+    <button class="nav-hamburger" id="hamburger" aria-label="Меню"><span></span><span></span><span></span></button>
+  </div>
+  <div class="nav-drawer" id="nav-drawer">
+    <a href="index.html#path" class="nav-link">Нашият път</a>
+    <a href="blog.html" class="nav-link">Блог</a>
+    <a href="index.html#youtube" class="nav-link">YouTube</a>
+    <a href="index.html#inspiration" class="nav-link">Вдъхновение</a>
+    <a href="index.html#about" class="nav-link">За мен</a>
+    <a href="https://konsultacii.ednaistina.bg" class="nav-link ext" target="_blank" rel="noopener">Консултации ↗</a>
+  </div>
+</nav>
+
+<header class="bloglist-head">
+  <!-- ✎ Етикет -->
+  <div class="section-label">Блогът</div>
+  <!-- ✎ Заглавие -->
+  <h1 class="section-heading">Пътека на осъзнаване, стъпка по стъпка.</h1>
+  <!-- ✎ Въвеждащ абзац -->
+  <p class="bloglist-intro">Статиите са номерирани с причина — всяка стъпва върху предишната. Ако си тук за първи път, започни от 01 и остави пътеката да те води. Ако вече вървиш по нея, избери каквото те вика днес.</p>
+</header>
+
+<main class="bloglist">
+  <!-- ✎ Бутони-филтри по категория (добави „Практиките“, когато излезе първата практика) -->
+  <div class="blog-filters">
+    <button class="filter-btn active" data-filter="all">Всички</button>
+    <button class="filter-btn" data-filter="osnova">Основата</button>
+    <button class="filter-btn" data-filter="pogled">През този поглед</button>
+    <button class="filter-btn" data-filter="beleshki">Бележки от терен</button>
+  </div>
+
+  <!-- ✎ Статия 01 (началото на пътеката) -->
+  <div class="list-post featured" data-category="beleshki">
+    <div class="list-num">01</div>
+    <div class="post-cat">Бележки от терен</div>
+    <div><a class="post-title" href="blog-01-kak-lyubovta-me-izbavi-ot-karmata.html">Въведение: Как любовта ме избави от кармата ми</a><span class="list-start">Започни оттук</span></div>
+    <div class="post-meta">юли 2025 · 12 мин</div>
+  </div>
+  <!-- ✎ Статия 02 -->
+  <div class="list-post" data-category="osnova">
+    <div class="list-num">02</div>
+    <div class="post-cat">Основата</div>
+    <div><a class="post-title" href="blog-02-kak-da-razshirim-saznanieto-si-chrez-energiyata.html">Как да разширим съзнанието си чрез енергията</a></div>
+    <div class="post-meta">юли 2025 · 6 мин</div>
+  </div>
+  <!-- ✎ Статия 03 -->
+  <div class="list-post" data-category="osnova">
+    <div class="list-num">03</div>
+    <div class="post-cat">Основата</div>
+    <div><a class="post-title" href="blog-03-vselenata-e-bipolyarna.html">Вселената е биполярна</a></div>
+    <div class="post-meta">авг 2025 · 4 мин</div>
+  </div>
+  <!-- ✎ Статия 04 -->
+  <div class="list-post" data-category="osnova">
+    <div class="list-num">04</div>
+    <div class="post-cat">Основата</div>
+    <div><a class="post-title" href="blog-04-za-lyubovta-i-straha.html">За Любовта и Страха</a></div>
+    <div class="post-meta">авг 2025 · 6 мин</div>
+  </div>
+  <!-- ✎ Статия 05 -->
+  <div class="list-post" data-category="osnova">
+    <div class="list-num">05</div>
+    <div class="post-cat">Основата</div>
+    <div><a class="post-title" href="blog-05-meditaciya-varhu-horata-sadbata-i-volyata.html">Медитация върху хората, съдбата и волята</a></div>
+    <div class="post-meta">сеп 2025 · 10 мин</div>
+  </div>
+  <!-- ✎ Статия 06 -->
+  <div class="list-post" data-category="pogled">
+    <div class="list-num">06</div>
+    <div class="post-cat">През този поглед</div>
+    <div><a class="post-title" href="blog-06-za-nadezhdata-vyarata-i-nepokolebimostta.html">За надеждата, вярата и непоколебимостта</a></div>
+    <div class="post-meta">сеп 2025 · 6 мин</div>
+  </div>
+  <!-- ✎ Статия 07 -->
+  <div class="list-post" data-category="osnova">
+    <div class="list-num">07</div>
+    <div class="post-cat">Основата</div>
+    <div><a class="post-title" href="blog-07-kade-se-krie-bog.html">Къде се крие Бог?</a></div>
+    <div class="post-meta">яну 2026 · 8 мин</div>
+  </div>
+  <!-- ✎ Статия 08 -->
+  <div class="list-post" data-category="pogled">
+    <div class="list-num">08</div>
+    <div class="post-cat">През този поглед</div>
+    <div><a class="post-title" href="blog-08-namerihme-bog-sega-kakvo.html">Намерихме Бог. Сега какво?</a></div>
+    <div class="post-meta">мар 2026 · 7 мин</div>
+  </div>
+  <!-- ✎ Статия 09 -->
+  <div class="list-post" data-category="beleshki">
+    <div class="list-num">09</div>
+    <div class="post-cat">Бележки от терен</div>
+    <div><a class="post-title" href="blog-09-nyakolko-dumi-za-siyaynite-hora.html">Няколко думи за сияйните хора</a></div>
+    <div class="post-meta">апр 2026 · 5 мин</div>
+  </div>
+  <!-- ✎ Статия 10 -->
+  <div class="list-post" data-category="osnova">
+    <div class="list-num">10</div>
+    <div class="post-cat">Основата</div>
+    <div><a class="post-title" href="blog-10-za-bitieto-dushata-i-karmata.html">За битието, душата и кармата</a></div>
+    <div class="post-meta">апр 2026 · 6 мин</div>
+  </div>
+  <!-- ✎ Статия 11 -->
+  <div class="list-post" data-category="beleshki">
+    <div class="list-num">11</div>
+    <div class="post-cat">Бележки от терен</div>
+    <div><a class="post-title" href="blog-11-nabozhniyat-ucheniyat-i-znaeshtiyat.html">Набожният, Ученият и Знаещият</a></div>
+    <div class="post-meta">апр 2026 · 12 мин</div>
+  </div>
+  <!--
+    ✎ НОВА СТАТИЯ: копирай някой от блоковете по-горе, смени номера, категорията
+    (data-category: osnova / pogled / beleshki / praktiki), заглавието, линка и датата.
+  -->
+</main>
+
+<footer>
+  <div class="footer-logo"><img src="images/logo.png" alt="Една Истина"></div>
+  <div class="footer-links">
+    <a href="index.html#path" class="footer-link">Нашият път</a><span class="footer-div">·</span>
+    <a href="blog.html" class="footer-link">Блог</a><span class="footer-div">·</span>
+    <a href="index.html#youtube" class="footer-link">YouTube</a><span class="footer-div">·</span>
+    <a href="index.html#about" class="footer-link">За мен</a><span class="footer-div">·</span>
+    <a href="https://konsultacii.ednaistina.bg" class="footer-link" target="_blank" rel="noopener">Консултации</a>
+  </div>
+  <div class="footer-copy">© 2026 Една Истина</div>
+</footer>
+
+<script>
+  const btt=document.getElementById('back-to-top');
+  addEventListener('scroll',()=>btt.classList.toggle('visible',scrollY>420));
+  const ham=document.getElementById('hamburger'),drw=document.getElementById('nav-drawer');
+  ham.addEventListener('click',()=>{ham.classList.toggle('open');drw.classList.toggle('open')});
+  drw.querySelectorAll('a').forEach(l=>l.addEventListener('click',()=>{ham.classList.remove('open');drw.classList.remove('open')}));
+  document.querySelectorAll('.filter-btn').forEach(b=>b.addEventListener('click',()=>{
+    document.querySelectorAll('.filter-btn').forEach(x=>x.classList.remove('active'));
+    b.classList.add('active');const f=b.dataset.filter;
+    document.querySelectorAll('[data-category]').forEach(p=>p.style.display=(f==='all'||p.dataset.category===f)?'':'none');
+  }));
+</script>
+</body>
+</html>
