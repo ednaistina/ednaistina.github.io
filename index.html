@@ -473,7 +473,7 @@
         const xml=new DOMParser().parseFromString(await res.text(),'text/xml');
         const entries=[...xml.getElementsByTagName('entry')].slice(0,6);
         if(!entries.length)throw new Error('фийдът върна 0 видеа (проверете Channel ID)');
-        const mes=['яну','фев','мар','апр','май','юни','юли','авг','сеп','окт','ное','дек'];
+        const mes=['януари','февруари','март','април','май','юни','юли','август','септември','октомври','ноември','декември'];
         const list=entries.map(e=>{
           const g=(tag)=>{const n=e.getElementsByTagNameNS('*',tag)[0];return n?n.textContent:''};
           const id=g('videoId'),d=new Date(g('published'));
@@ -483,7 +483,7 @@
             cat:mes[d.getMonth()]+' '+d.getFullYear(),
             title:g('title'),
             link:'https://www.youtube.com/watch?v='+id,
-            thumb:'https://i.ytimg.com/vi/'+id+'/hqdefault.jpg',
+            thumb:'https://i.ytimg.com/vi/'+id+'/mqdefault.jpg',
             desc:'<p class="persp-row-text">'+(desc||'Гледай видеото в канала.')+'</p>'
           };
         });
@@ -518,63 +518,63 @@
       num: "03", cat: "Основата", key: "osnova",
       title: "Вселената е биполярна",
       desc: `<p class="persp-row-text">Светлина и мрак, лице и гръб на една монета — пет извода за дуалната природа на всичко.</p>`,
-      meta: "авг 2025 · 4 мин четене",
+      meta: "август 2025 · 4 мин четене",
       link: "blog-03-vselenata-e-bipolyarna.html"
     },
     {
       num: "04", cat: "Основата", key: "osnova",
       title: "За Любовта и Страха",
       desc: `<p class="persp-row-text">Медитация върху двете фундаментални сили, които оформят живота ни — и защо любовта е причина, а не резултат.</p>`,
-      meta: "авг 2025 · 6 мин четене",
+      meta: "август 2025 · 6 мин четене",
       link: "blog-04-za-lyubovta-i-straha.html"
     },
     {
       num: "05", cat: "Основата", key: "osnova",
       title: "Медитация върху хората, съдбата и волята",
       desc: `<p class="persp-row-text">За корпорацията „Аз“, енергийните частици и волята — устройството за телепортиране между версиите на съдбата ни.</p>`,
-      meta: "сеп 2025 · 10 мин четене",
+      meta: "септември 2025 · 10 мин четене",
       link: "blog-05-meditaciya-varhu-horata-sadbata-i-volyata.html"
     },
     {
       num: "06", cat: "През този поглед", key: "pogled",
       title: "За надеждата, вярата и непоколебимостта",
       desc: `<p class="persp-row-text">Надеждата, вярата и непоколебимостта, разгледани през призмата на Любовта и Страха.</p>`,
-      meta: "сеп 2025 · 6 мин четене",
+      meta: "септември 2025 · 6 мин четене",
       link: "blog-06-za-nadezhdata-vyarata-i-nepokolebimostta.html"
     },
     {
       num: "07", cat: "Основата", key: "osnova",
       title: "Къде се крие Бог?",
       desc: `<p class="persp-row-text">От светлината и бозона на Хигс до квантовата матрица — едно търсене на Бог с нови очи.</p>`,
-      meta: "яну 2026 · 8 мин четене",
+      meta: "януари 2026 · 8 мин четене",
       link: "blog-07-kade-se-krie-bog.html"
     },
     {
       num: "08", cat: "През този поглед", key: "pogled",
       title: "Намерихме Бог. Сега какво?",
       desc: `<p class="persp-row-text">Сънищата като матрьошки, фрагментите на съзнанието и какво реално ни дава знанието, че Всемъдрия съществува.</p>`,
-      meta: "мар 2026 · 7 мин четене",
+      meta: "март 2026 · 7 мин четене",
       link: "blog-08-namerihme-bog-sega-kakvo.html"
     },
     {
       num: "09", cat: "Бележки от терен", key: "beleshki",
       title: "Няколко думи за сияйните хора",
       desc: `<p class="persp-row-text">Историята на един учител, една награда и хората, които безкористно изваждат най-доброто у нас.</p>`,
-      meta: "апр 2026 · 5 мин четене",
+      meta: "април 2026 · 5 мин четене",
       link: "blog-09-nyakolko-dumi-za-siyaynite-hora.html"
     },
     {
       num: "10", cat: "Основата", key: "osnova",
       title: "За битието, душата и кармата",
       desc: `<p class="persp-row-text">Защо двама дзен монаси се смеят на падащите листа — за пътя на душата, цикъла на битието и кармата.</p>`,
-      meta: "апр 2026 · 6 мин четене",
+      meta: "април 2026 · 6 мин четене",
       link: "blog-10-za-bitieto-dushata-i-karmata.html"
     },
     {
       num: "11", cat: "Бележки от терен", key: "beleshki",
       title: "Набожният, Ученият и Знаещият",
       desc: `<p class="persp-row-text">Три срещи, три архетипа на отношение към Истината — и какво ги отличава.</p>`,
-      meta: "апр 2026 · 12 мин четене",
+      meta: "април 2026 · 12 мин четене",
       link: "blog-11-nabozhniyat-ucheniyat-i-znaeshtiyat.html"
     }
   ];
