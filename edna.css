@@ -147,7 +147,7 @@
   @media(max-width:520px){.yt-grid{grid-template-columns:1fr}}
   .yt-card{display:flex;flex-direction:column;background:var(--paper);border:1px solid var(--line);border-radius:10px;overflow:hidden;text-decoration:none;color:inherit;transition:transform .18s,box-shadow .25s}
   .yt-card:hover{transform:translateY(-4px);box-shadow:0 24px 48px -28px rgba(60,50,20,.4)}
-  .yt-thumb{aspect-ratio:16/9;background:var(--bg-3);display:grid;place-items:center;color:var(--gold-deep);font-size:26px;border-bottom:1px solid var(--line)}
+  .yt-thumb{aspect-ratio:16/9;background:var(--bg-3) center/cover no-repeat;display:grid;place-items:center;color:var(--gold-deep);font-size:26px;border-bottom:1px solid var(--line)}
   .yt-body{padding:14px 16px 16px}
   .yt-title{font-family:'Lora',serif;font-style:italic;font-size:16px;color:var(--ink);line-height:1.3}
   .yt-meta{font-size:11px;color:var(--ink-faint);margin-top:7px;letter-spacing:.04em}
