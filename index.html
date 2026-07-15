@@ -107,7 +107,7 @@
     <button class="filter-btn active" data-filter="all">Всички</button>
     <button class="filter-btn" data-filter="osnova">Фундаментът</button>
     <button class="filter-btn" data-filter="pogled">През тази призма</button>
-    <button class="filter-btn" data-filter="beleshki">Наблюдения</button>
+    <button class="filter-btn" data-filter="beleshki">Преживяното</button>
   </div>
 
   <!-- блокът показва СЕЛЕКТИРАНАТА статия.
@@ -221,7 +221,7 @@
     <!-- ✎ Етикет -->
     <div class="section-label">За мен</div>
     <!-- ✎ Заглавие -->
-    <h2 class="section-heading">Откъде дойде това.</h2>
+    <h2 class="section-heading">Как открих своя път.</h2>
   </div>
   <div class="about-inner">
     <div class="about-text fade-in">
@@ -237,12 +237,12 @@
     </div>
     <div class="about-pillars fade-in">
       <!-- ✎ Заглавие на колоната -->
-      <div class="about-pillars-label">Какво ще намерите тук</div>
+      <div class="about-pillars-label">Какво ще намерите тук?</div>
       <!-- ✎ Четири стълба · име/описание/етикет (всеки .pillar) -->
       <div class="pillars">
         <div class="pillar"><div class="pillar-name">Фундаментът</div><p class="pillar-desc">Емпиричните философски доводи, че има нещо повече от видимото: Бог, космически разум, висша енергия. Много имена, една истина.</p><span class="pillar-tag">Безплатно</span></div>
         <div class="pillar"><div class="pillar-name">През тази призма</div><p class="pillar-desc">Обикновеният живот — отношения, страх, любов, работа — погледнати осъзнато.</p><span class="pillar-tag">Безплатно</span></div>
-        <div class="pillar"><div class="pillar-name">Наблюдения</div><p class="pillar-desc">Кратки мигове, оставящи трайни спомени. Нещата, край които подминаваме всеки ден и които разказват всичко. Стига да спрем и да се заслушаме.</p><span class="pillar-tag">Безплатно</span></div>
+        <div class="pillar"><div class="pillar-name">Преживяното</div><p class="pillar-desc">Кратки мигове, оставящи трайни спомени. Нещата, край които подминаваме всеки ден и които разказват всичко. Стига да спрем и да се заслушаме.</p><span class="pillar-tag">Безплатно</span></div>
         <div class="pillar"><div class="pillar-name">Практиките</div><p class="pillar-desc">Инструменти за себепознанието и вътрешния мир.</p><span class="pillar-tag soon">Скоро</span></div>
       </div>
     </div>
@@ -467,7 +467,7 @@
       const url=m(feed);
       try{
         const ctrl=new AbortController();
-        const t=setTimeout(()=>ctrl.abort(),8000);
+        const t=setTimeout(()=>ctrl.abort(),2000);
         const res=await fetch(url,{signal:ctrl.signal});
         clearTimeout(t);
         if(!res.ok)throw new Error('HTTP '+res.status);
@@ -502,77 +502,77 @@
      заглавие, кратко описание (HTML), дата · време и линк към страницата. */
   const BLOG_POSTS = [
     {
-      num: "01", cat: "Бележки от терен", key: "beleshki",
+      num: "01", cat: "Преживяното", key: "beleshki",
       title: "Въведение: Как любовта ме избави от кармата ми",
       desc: `<p class="persp-row-text">Историята на една февруарска нощ — треска, фойерверки от идеи и изборът, който ме извади от кармичния ми кръг. Началото на пътеката.</p>`,
       meta: "юли 2025 · 12 мин четене",
       link: "blog-01-kak-lyubovta-me-izbavi-ot-karmata.html"
     },
     {
-      num: "02", cat: "Основата", key: "osnova",
+      num: "02", cat: "Фундаментът", key: "osnova",
       title: "Как да разширим съзнанието си чрез енергията",
       desc: `<p class="persp-row-text">Материя, емоции, информация — защо всичко опира до енергията и какво следва от това.</p>`,
       meta: "юли 2025 · 6 мин четене",
       link: "blog-02-kak-da-razshirim-saznanieto-si-chrez-energiyata.html"
     },
     {
-      num: "03", cat: "Основата", key: "osnova",
+      num: "03", cat: "Фундаментът", key: "osnova",
       title: "Вселената е биполярна",
       desc: `<p class="persp-row-text">Светлина и мрак, лице и гръб на една монета — пет извода за дуалната природа на всичко.</p>`,
       meta: "август 2025 · 4 мин четене",
       link: "blog-03-vselenata-e-bipolyarna.html"
     },
     {
-      num: "04", cat: "Основата", key: "osnova",
+      num: "04", cat: "Фундаментът", key: "osnova",
       title: "За Любовта и Страха",
       desc: `<p class="persp-row-text">Медитация върху двете фундаментални сили, които оформят живота ни — и защо любовта е причина, а не резултат.</p>`,
       meta: "август 2025 · 6 мин четене",
       link: "blog-04-za-lyubovta-i-straha.html"
     },
     {
-      num: "05", cat: "Основата", key: "osnova",
+      num: "05", cat: "Фундаментът", key: "osnova",
       title: "Медитация върху хората, съдбата и волята",
       desc: `<p class="persp-row-text">За корпорацията „Аз“, енергийните частици и волята — устройството за телепортиране между версиите на съдбата ни.</p>`,
       meta: "септември 2025 · 10 мин четене",
       link: "blog-05-meditaciya-varhu-horata-sadbata-i-volyata.html"
     },
     {
-      num: "06", cat: "През този поглед", key: "pogled",
+      num: "06", cat: "През тази призма", key: "pogled",
       title: "За надеждата, вярата и непоколебимостта",
       desc: `<p class="persp-row-text">Надеждата, вярата и непоколебимостта, разгледани през призмата на Любовта и Страха.</p>`,
       meta: "септември 2025 · 6 мин четене",
       link: "blog-06-za-nadezhdata-vyarata-i-nepokolebimostta.html"
     },
     {
-      num: "07", cat: "Основата", key: "osnova",
+      num: "07", cat: "Фундаментът", key: "osnova",
       title: "Къде се крие Бог?",
       desc: `<p class="persp-row-text">От светлината и бозона на Хигс до квантовата матрица — едно търсене на Бог с нови очи.</p>`,
       meta: "януари 2026 · 8 мин четене",
       link: "blog-07-kade-se-krie-bog.html"
     },
     {
-      num: "08", cat: "През този поглед", key: "pogled",
+      num: "08", cat: "През тази призма", key: "pogled",
       title: "Намерихме Бог. Сега какво?",
       desc: `<p class="persp-row-text">Сънищата като матрьошки, фрагментите на съзнанието и какво реално ни дава знанието, че Всемъдрия съществува.</p>`,
       meta: "март 2026 · 7 мин четене",
       link: "blog-08-namerihme-bog-sega-kakvo.html"
     },
     {
-      num: "09", cat: "Бележки от терен", key: "beleshki",
+      num: "09", cat: "Преживяното", key: "beleshki",
       title: "Няколко думи за сияйните хора",
       desc: `<p class="persp-row-text">Историята на един учител, една награда и хората, които безкористно изваждат най-доброто у нас.</p>`,
       meta: "април 2026 · 5 мин четене",
       link: "blog-09-nyakolko-dumi-za-siyaynite-hora.html"
     },
     {
-      num: "10", cat: "Основата", key: "osnova",
+      num: "10", cat: "Фундаментът", key: "osnova",
       title: "За битието, душата и кармата",
       desc: `<p class="persp-row-text">Защо двама дзен монаси се смеят на падащите листа — за пътя на душата, цикъла на битието и кармата.</p>`,
       meta: "април 2026 · 6 мин четене",
       link: "blog-10-za-bitieto-dushata-i-karmata.html"
     },
     {
-      num: "11", cat: "Бележки от терен", key: "beleshki",
+      num: "11", cat: "Преживяното", key: "beleshki",
       title: "Набожният, Ученият и Знаещият",
       desc: `<p class="persp-row-text">Три срещи, три архетипа на отношение към Истината — и какво ги отличава.</p>`,
       meta: "април 2026 · 12 мин четене",
