@@ -12,16 +12,8 @@
 </head>
 <body>
 
-<!--
-  ✎  РЕДАКТИРАНЕ НА ТЕКСТА
-  Всяко редактируемо текстово поле е маркирано с „✎“ в коментар над него.
-  Натисни Ctrl+F, търси знака ✎ и прескачай между текстовете.
-  Сменяй само текста МЕЖДУ таговете. НЕ пипай: src="data:image...", href="...", class="..." и <script>.
--->
-
 <button id="back-to-top" aria-label="Нагоре" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
 
-<!-- блед статичен лотос-фон (секциите се движат над него при скрол) -->
 <div class="bg-lotus" aria-hidden="true"></div>
 
 <nav id="navbar">
@@ -43,47 +35,31 @@
     <a href="#inspiration" class="nav-link">Вдъхновение</a>
     <a href="#about" class="nav-link">За мен</a>
     <a href="#join" class="nav-link">Общност</a>
-    <!-- <a href="https://konsultacii.ednaistina.bg" class="nav-link ext" target="_blank" rel="noopener">Консултации ↗</a> -->
   </div>
 </nav>
 
-<!-- ═══════ ХЕРОЙ ═══════ -->
 <section id="hero">
-  <!-- ✎ Голямо заглавие (цитатът) -->
   <h1 class="hero-heading">Не вярвам. Знам.</h1>
-  <!-- ✎ Автор на цитата (под него, в курсив) -->
   <div class="hero-author">— Карл Густав Юнг</div>
-  <!-- ✎ Въвеждащ абзац -->
   <p class="hero-body">Малко или повече у всеки от нас има едно усещане за нещо скрито — отвъд шума на забързаното ежедневие, отвъд познатото ни, но в същото време тъй топло и близко. <strong>Една Истина</strong> е място за хората, готови да превърнат това усещане в знание. Без предварителна подготовка. Без учебници и курсове. Необходими са само малко любопитство и непредубеденост.</p>
-  <!-- ✎ Двата бутона (текст в тях) -->
   <div class="hero-ctas">
     <a href="#path" class="btn-primary">Започни оттук</a>
     <a href="#blog" class="btn-ghost">Разгледай блога</a>
   </div>
-  <!-- ✎ Линк под бутоните -->
-  <!-- <div class="hero-book"><a href="https://konsultacii.ednaistina.bg" class="btn-text" style="font-size:11.5px;color:var(--subtle)" target="_blank" rel="noopener">Или запази лична консултация</a></div> -->
 </section>
 <hr class="horizon">
 
-<!-- ═══════ НАШИЯТ ПЪТ ═══════ -->
 <section id="path"><div class="container">
   <div class="fade-in">
-    <!-- ✎ Етикет -->
     <div class="section-label">Нашият път</div>
-    <!-- ✎ Заглавие -->
     <h2 class="section-heading">Вече сме поели по пътя към истината</h2>
-    <!-- ✎ Въведение -->
     <p class="section-intro">Това не е учебна програма, а аз не съм нито учител, нито гуру. По-скоро спътник, изминал малко повече от пътя, по който вече сте поели. Тук споделям онова, което съм намерил през годините — и което ми се иска някой да ми бе споделил преди, така че пътят да е по-лесен и не чак толкова самотен. За всеки от нас е отреден различен маршрут, водещ до една и съща точка — Себето (истинския Аз). Едни ще могат да изминат пътя наведнъж, но за други ще са необходими и кратки почивки. Независимо от темпото, пътят има три основни етапа:</p>
   </div>
   <div class="path-cards">
-    <!-- ✎ Карта 1 · номер/заглавие/текст -->
     <div class="path-card fade-in"><div class="path-num">01</div><div class="path-title">Усещане</div><p class="path-text">Нещо в нас вече знае, че на този свят работят сили, които са скрити отвъд обозримото. Това тихо усещане има име, логика и посока. Започваме от тук — от този вътрешен усет, без очаквания, догми и пропаганди.</p></div>
-    <!-- ✎ Карта 2 -->
     <div class="path-card fade-in"><div class="path-num">02</div><div class="path-title">Осъзнаване</div><p class="path-text">Философията, науката и най-древните духовни традиции сочат към едно и също. Те са като прозорците на една къща — показващи малки късчета от света, в който живеем.</p></div>
-    <!-- ✎ Карта 3 -->
     <div class="path-card fade-in"><div class="path-num">03</div><div class="path-title">Манифестация</div><p class="path-text">Най-важният етап тепърва започва и лека-полека ни разкрива как да втъкмим осъзнатото в обикновения живот — в отношенията, изборите, начина, по който преминаваш през тежък ден. Тайна, която всяко дете знае, но забравя с годините.</p></div>
   </div>
-  <!-- ✎ Бутони -->
   <div class="path-ctas fade-in">
     <a href="#blog" class="btn-ghost">Продължи да четеш</a>
     <a href="#join" class="btn-text">Продължи напред с нас</a>
@@ -91,18 +67,13 @@
 </div></section>
 <hr class="horizon">
 
-<!-- ═══════ БЛОГ (интерактивна галерия) ═══════ -->
 <section id="blog"><div class="container">
   <div class="fade-in">
-    <!-- ✎ Етикет -->
     <div class="section-label">Блогът</div>
-    <!-- ✎ Заглавие -->
     <h2 class="section-heading">Идеи, над които носещи свобода.</h2>
-    <!-- ✎ Въведение -->
     <p class="section-intro">Статиите са номерирани като прогрес на осъзнаване — всяка надгражда предишната.</p>
   </div>
 
-  <!-- ✎ Бутони-филтри по категория (добави „Практиките“, когато излезе първата практика) -->
   <div class="blog-filters fade-in">
     <button class="filter-btn active" data-filter="all">Всички</button>
     <button class="filter-btn" data-filter="osnova">Фундаментът</button>
@@ -110,8 +81,6 @@
     <button class="filter-btn" data-filter="beleshki">Преживяното</button>
   </div>
 
-  <!-- блокът показва СЕЛЕКТИРАНАТА статия.
-       Статиите се редактират в списъка BLOG_POSTS в <script> в края на файла. -->
   <div class="persp-card hook fade-in" id="blog-hook">
     <div class="persp-trad bh-anim" id="bh-cat"></div>
     <div class="persp-title bh-anim" id="bh-title"></div>
@@ -120,53 +89,36 @@
     <a class="hook-cta" id="bh-cta" href="#">Прочети статията →</a>
   </div>
 
-  <!-- картите се генерират автоматично от списъка BLOG_POSTS -->
   <div class="bp-grid fade-in" id="bp-grid"></div>
 
-  <!-- ✎ Линк „Всички статии“ -->
   <div class="blog-more fade-in" style="text-align:center"><a href="blog.html" class="btn-text">Всички статии</a></div>
 </div></section>
 <hr class="horizon">
 
-<!-- ═══════ ПРАКТИКИТЕ ═══════ -->
 <section id="work"><div class="container">
   <div class="fade-in">
-    <!-- ✎ Етикет -->
     <div class="section-label">Практиките</div>
-    <!-- ✎ Заглавие -->
     <h2 class="section-heading">Практически инструменти за вътрешния живот.</h2>
-    <!-- ✎ Въведение -->
     <p class="section-intro">Това не са медитативни техники за изпълнение. Това са нови гледни точки към битието. Тяхното усвояване е ключът към себепознанието и вътрешния мир. Разглеждат се по-задълбочено в личните консултации.</p>
   </div>
   <div class="work-grid">
-    <!-- ✎ Карта 1 · заглавие/текст -->
     <div class="work-card fade-in"><span class="work-badge">Скоро</span><div class="work-icon">◎</div><div class="work-title">Одитът „Любов / Страх"</div><p class="work-text">Ежедневна практика за проследяване на всяко действие или реакция до корена му. Голяма част от това, което наричаме решения, всъщност са реакции. С тази практика започва активното живеене.</p></div>
-    <!-- ✎ Карта 2 -->
     <div class="work-card fade-in"><span class="work-badge">Скоро</span><div class="work-icon">◈</div><div class="work-title">Разгръщане на кармичния кръг</div><p class="work-text">Грешката, която повтаряме, има шарка. Щом я видим ясно, кръгът се разтваря и губи власт над нас. Тази практика учи как да я разпознаем и да прогресираме.</p></div>
-    <!-- ✎ Карта 3 -->
     <div class="work-card fade-in"><span class="work-badge">Скоро</span><div class="work-icon">✦</div><div class="work-title">Воля над желание</div><p class="work-text">Желанието те тегли към това, което иска егото. Волята ти е това, което всъщност си. Да усетим разликата — а не да я търсиш. Тази практика помага за препрограмиране на егото.</p></div>
   </div>
-  <!-- ✎ Бутони -->
   <div class="work-ctas fade-in">
     <a href="#join" class="btn-primary">Уведоми ме, когато отворят</a>
-    <!-- <a href="https://konsultacii.ednaistina.bg" class="btn-text" target="_blank" rel="noopener">Или запази консултация</a> -->
   </div>
 </div></section>
 <hr class="horizon">
 
-<!-- ═══════ YOUTUBE ГАЛЕРИЯ ═══════ -->
 <section id="youtube"><div class="container">
   <div class="fade-in">
-    <!-- ✎ Етикет -->
     <div class="section-label">YouTube</div>
-    <!-- ✎ Заглавие -->
     <h2 class="section-heading">Нашият видео канал.</h2>
-    <!-- ✎ Въведение -->
     <p class="section-intro">Изберите видео от галерията, за резюме на неговата тема. Пълните беседи, гостите и разсъжденията са в канал @ednaistina</p>
   </div>
 
-  <!-- блокът показва описанието на СЕЛЕКТИРАНОТО видео.
-       Видеата се редактират в списъка VIDEOS в <script> в края на файла. -->
   <div class="persp-card hook fade-in" id="hook">
     <div class="persp-trad" id="hook-cat"></div>
     <div class="persp-title" id="hook-title"></div>
@@ -174,23 +126,17 @@
     <a class="hook-cta" id="hook-cta" href="#" target="_blank" rel="noopener">Гледай видеото в YouTube →</a>
   </div>
 
-  <!-- картите се генерират автоматично от списъка VIDEOS -->
   <div class="yt-grid fade-in" id="yt-grid"></div>
 
-  <!-- ✎ Бутон към целия канал -->
   <div class="yt-more fade-in"><a class="btn-primary" href="https://www.youtube.com/@ednaistina" target="_blank" rel="noopener">Към всички епизоди ↗</a></div>
 </div></section>
 <hr class="horizon">
 
-<!-- ═══════ ВДЪХНОВЕНИЕ ═══════ -->
 <section id="inspiration"><div class="container">
   <div class="fade-in">
-    <!-- ✎ Етикет -->
     <div class="section-label">Вдъхновение</div>
-    <!-- ✎ Заглавие -->
     <h2 class="section-heading">Думи, които са устояли.</h2>
   </div>
-  <!-- ✎ ЦИТАТИ · всеки .quote-slide = текст/автор/традиция; добавяй или махай слайдове свободно -->
   <div class="quote-gallery fade-in">
     <div class="quote-slide active"><div class="quote-text">Сърцето има своите причини, които разумът не познава.</div><div class="quote-source">Блез Паскал</div><div class="quote-trad">Християнски мистицизъм</div></div>
     <div class="quote-slide"><div class="quote-text">Отвъд представите за грешно и правилно има поле. Там ще те чакам.</div><div class="quote-source">Руми</div><div class="quote-trad">Суфизъм</div></div>
@@ -215,30 +161,21 @@
 </div></section>
 <hr class="horizon">
 
-<!-- ═══════ ЗА МЕН ═══════ -->
 <section id="about"><div class="container">
   <div class="fade-in">
-    <!-- ✎ Етикет -->
     <div class="section-label">За мен</div>
-    <!-- ✎ Заглавие -->
     <h2 class="section-heading">Как открих своя път.</h2>
   </div>
   <div class="about-inner">
     <div class="about-text fade-in">
-      <!-- ✎ Биография · абзац 1 -->
       <p>През февруари 2019 нещо се промени. Не тихо и спокойно, а със силна треска и висока температура. В продължение на часове в съзнанието ми като заря изригваха идеи обясняващи света и хората. Последваха няколко дни в самото, в които преразгледах целия си живот: успехите, очевидните грешки, както и онези, които упорито не бях виждал. Страхът, който наричах сила. Любовта, която наричах слабост.</p>
-      <!-- ✎ Биография · абзац 2 -->
       <p>Не знаех какво да правя с това, затова започнах да споделям. Първо с приятели, после с всеки, който би слушал. Някои възразяваха. Други се връщаха седмици по-късно и казваха, че нещо се е променило. „Една Истина" започна точно така — като честен опит да споделя нещо, което не бях заслужил и не бе редно да пазя за себе си.</p>
-      <!-- ✎ Биография · абзац 3 -->
       <p>Това, което живее тук сега, е всичко събрано оттогава: от традициите, които потвърдиха намереното, от хората, добавили нюанс, и от обикновения живот, в който всичко това трябваше да докаже дали е истина, или не.</p>
-      <!-- ✎ Биография · абзац 4 -->
       <p>Не съм учител. Аз съм спътник, изминал малко повече от същия път, по който всички сме поели. Това е всичко.</p>
 	  <p>Явор Николов</p>
     </div>
     <div class="about-pillars fade-in">
-      <!-- ✎ Заглавие на колоната -->
       <div class="about-pillars-label">Какво ще намерите тук?</div>
-      <!-- ✎ Четири стълба · име/описание/етикет (всеки .pillar) -->
       <div class="pillars">
         <div class="pillar"><div class="pillar-name">Фундаментът</div><p class="pillar-desc">Емпиричните философски доводи, че има нещо повече от видимото: Бог, космически разум, висша енергия. Много имена, една истина.</p><span class="pillar-tag">Безплатно</span></div>
         <div class="pillar"><div class="pillar-name">През тази призма</div><p class="pillar-desc">Обикновеният живот — отношения, страх, любов, работа — погледнати осъзнато.</p><span class="pillar-tag">Безплатно</span></div>
@@ -250,17 +187,12 @@
 </div></section>
 <hr class="horizon">
 
-<!-- ═══════ ОБЩНОСТ ═══════ -->
 <section id="join"><div class="container">
   <div class="fade-in">
-    <!-- ✎ Етикет -->
     <div class="section-label">Общност</div>
-    <!-- ✎ Заглавие -->
     <h2 class="section-heading">Добре дошли в Една Истина</h2>
-    <!-- ✎ Въведение -->
     <p class="section-intro">Знанието, което ми бе дадено е безплатно за четене тук или гледане в ютюб канала ни. Ако искате повече от това — предлагаме консултация, беседи на живо и връзка с нашите спътници.</p>
   </div>
-  <!-- ✎ Три плана · име/цена/предимства (всеки .tier) -->
   <div class="tiers fade-in">
     <div class="tier"><div class="tier-name">Търсещ</div><div class="tier-price">Винаги безплатно</div><ul class="tier-feats"><li>Пълен достъп до блога</li><li>Нашият път — целият маршрут на четене</li><li>Вдъхновение и видео</li><li>Възможност за лична консултация</li></ul></div>
     <div class="tier feat"><div class="tier-name">Спътник</div><div class="tier-price">Месечно · скоро</div><ul class="tier-feats"><li>Всичко от Търсещ</li><li>Практики</li><li>Ранен достъп до новите текстове</li><li>Вот за темата на живия разговор</li><li>Месечна беседа на живо</li></ul></div>
@@ -268,41 +200,17 @@
   </div>
   <div class="join-lower fade-in">
     <div class="join-form-wrap">
-      <!-- ✎ Текст над полето за имейл -->
       <div class="join-form-label">Оставете имейла си, за да Ви уведомя, когато отворя членството.</div>
       <div class="join-form">
         <input class="join-input" type="email" id="join-email" placeholder="твоят@имейл.bg">
         <button class="join-btn" onclick="handleJoin()">Остани свързан</button>
       </div>
-      <!-- ✎ Бележка под формата -->
       <div class="join-note">Само за известия, когато е публикувано нещо ново.</div>
     </div>
-    <!-- <div class="join-book"> -->
-      <!-- ✎ Текст до бутона за консултация -->
-      <!-- <p>Не си готов за членство? Една консултация е добро начало.</p> -->
-      <!-- <a href="https://konsultacii.ednaistina.bg" class="btn-text" target="_blank" rel="noopener">Запази консултация</a> -->
-    <!-- </div> -->
   </div>
 </div></section>
 <hr class="horizon">
 
-<!-- ═══════ КОНСУЛТАЦИИ ═══════ -->
-<!-- <section id="consult"><div class="container"> -->
-  <!-- <div class="fade-in"> -->
-    <!-- ✎ Етикет -->
-    <!-- <div class="section-label">Консултации</div> -->
-    <!-- ✎ Заглавие -->
-    <!-- <h2 class="section-heading">Един разговор може да промени посоката на много други.</h2> -->
-    <!-- ✎ Въведение -->
-    <!-- <p class="section-intro">Жив разговор един на един, отворен за всеки. На отделната платформа можеш да се регистрираш и да резервираш свободен час от моя календар.</p> -->
-    <!-- ✎ Бележка за цена/процес -->
-    <!-- <div class="consult-note">Плаща се за сесия. Цената се уточнява след кратка размяна на съобщения — искам първо да съм сигурен, че е подходящо за теб.</div> -->
-    <!-- ✎ Бутон -->
-    <!-- <a href="https://konsultacii.ednaistina.bg" class="btn-primary" target="_blank" rel="noopener">Резервирай час ↗</a> -->
-  <!-- </div> -->
-<!-- </div></section> -->
-
-<!-- ═══════ ДОЛЕН КОЛОНТИТУЛ (връзките повтарят менюто) ═══════ -->
 <footer>
   <div class="footer-logo"><img src="images/logo.png" alt="Една Истина"></div>
   <div class="footer-links">
@@ -358,23 +266,9 @@
   function handleJoin(){const i=document.getElementById('join-email');
     if(i.value&&i.value.includes('@')){i.value='';i.placeholder='Вписан си. Благодаря.';i.disabled=true}}
 
-  /* ============================================================
-     ✎ YOUTUBE ГАЛЕРИЯ — редактирай видеата ТУК.
-     Всяко видео: категория (напр. име на плейлиста), заглавие,
-     описание (HTML — може <p>, <strong>…), линк, миниатюра.
-     thumb: "" = сива карта с ▶; или URL към картинка
-     (за YouTube: https://i.ytimg.com/vi/ВИДЕО_ID/hqdefault.jpg)
-     Първото видео е селектирано при зареждане.
-     ============================================================ */
-  /* ═══════ YOUTUBE: АВТОМАТИЧНО ЗАРЕЖДАНЕ ═══════
-     ✎ Постави тук Channel ID на канала (започва с "UC…").
-     Намира се така: отвори канала в YouTube → „Повече за канала“ (About)
-     → „Споделяне на канал“ → „Копиране на идентификационния номер на канала“.
-     Докато е празно (или фийдът е недостъпен), галерията показва
-     резервния списък VIDEOS по-долу — нищо не се чупи. */
-  const YT_CHANNEL_ID = "AIzaSyBpYP4NvpNfn9NrxLaXIEQttZ3r8RnHS9Y";
+  const YT_CHANNEL_ID = "UCxNHus03IG17rvimM4IAXAg";
+  const YT_API_KEY = "AIzaSyBpYP4NvpNfn9NrxLaXIEQttZ3r8RnHS9Y";
 
-  /* ✎ Резервен списък — показва се само ако автоматичното зареждане не сработи */
   const VIDEOS = [
     {
       cat: "Философия",
@@ -450,56 +344,38 @@
   }
   renderVideos(VIDEOS);
 
-  /* Тегли последните 6 видеа от RSS фийда на канала.
-     Фийдът на YouTube не позволява директно четене от браузъра (CORS),
-     затова опитваме последователно ТРИ безплатни огледала — ако едното
-     е недостъпно, минаваме на следващото. При проблем причината се
-     изписва в конзолата на браузъра (F12 → Console). */
   async function loadYtVideos(){
-    if(!YT_CHANNEL_ID)return;
-    const feed='https://www.youtube.com/feeds/videos.xml?channel_id='+YT_CHANNEL_ID;
-    const mirrors=[
-      u=>'https://api.allorigins.win/raw?url='+encodeURIComponent(u),
-      u=>'https://corsproxy.io/?url='+encodeURIComponent(u),
-      u=>'https://api.codetabs.com/v1/proxy?quest='+encodeURIComponent(u)
-    ];
-    for(const m of mirrors){
-      const url=m(feed);
-      try{
-        const ctrl=new AbortController();
-        const t=setTimeout(()=>ctrl.abort(),2000);
-        const res=await fetch(url,{signal:ctrl.signal});
-        clearTimeout(t);
-        if(!res.ok)throw new Error('HTTP '+res.status);
-        const xml=new DOMParser().parseFromString(await res.text(),'text/xml');
-        const entries=[...xml.getElementsByTagName('entry')].slice(0,6);
-        if(!entries.length)throw new Error('фийдът върна 0 видеа (проверете Channel ID)');
-        const mes=['януари','февруари','март','април','май','юни','юли','август','септември','октомври','ноември','декември'];
-        const list=entries.map(e=>{
-          const g=(tag)=>{const n=e.getElementsByTagNameNS('*',tag)[0];return n?n.textContent:''};
-          const id=g('videoId'),d=new Date(g('published'));
-          let desc=g('description').trim().replace(/\s+/g,' ');
-          if(desc.length>230)desc=desc.slice(0,230).replace(/\S*$/,'')+'…';
-          return{
-            cat:mes[d.getMonth()]+' '+d.getFullYear(),
-            title:g('title'),
-            link:'https://www.youtube.com/watch?v='+id,
-            thumb:'https://i.ytimg.com/vi/'+id+'/mqdefault.jpg',
-            desc:'<p class="persp-row-text">'+(desc||'Гледай видеото в канала.')+'</p>'
-          };
-        });
-        renderVideos(list);
-        console.info('YT: заредени '+list.length+' видеа през '+new URL(url).host);
-        return;
-      }catch(err){console.warn('YT: огледалото '+new URL(url).host+' не сработи —',err.message||err)}
+    if(!YT_CHANNEL_ID||!YT_API_KEY)return;
+    const playlist='UU'+YT_CHANNEL_ID.slice(2);
+    const url='https://www.googleapis.com/youtube/v3/playlistItems'
+      +'?part=snippet&maxResults=6&playlistId='+playlist+'&key='+YT_API_KEY;
+    try{
+      const res=await fetch(url);
+      if(!res.ok)throw new Error('HTTP '+res.status);
+      const data=await res.json();
+      const items=(data.items||[]).filter(i=>i.snippet&&i.snippet.resourceId&&i.snippet.resourceId.videoId);
+      if(!items.length)throw new Error('API върна 0 видеа (проверете Channel ID)');
+      const mes=['януари','февруари','март','април','май','юни','юли','август','септември','октомври','ноември','декември'];
+      const list=items.map(i=>{
+        const s=i.snippet,id=s.resourceId.videoId,d=new Date(s.publishedAt);
+        let desc=(s.description||'').trim().replace(/\s+/g,' ');
+        if(desc.length>230)desc=desc.slice(0,230).replace(/\S*$/,'')+'…';
+        return{
+          cat:mes[d.getMonth()]+' '+d.getFullYear(),
+          title:s.title,
+          link:'https://www.youtube.com/watch?v='+id,
+          thumb:'https://i.ytimg.com/vi/'+id+'/mqdefault.jpg',
+          desc:'<p class="persp-row-text">'+(desc||'Гледай видеото в канала.')+'</p>'
+        };
+      });
+      renderVideos(list);
+      console.info('YT: заредени '+list.length+' видеа през YouTube Data API');
+    }catch(err){
+      console.warn('YT: API не сработи —',err.message||err,'— показва се резервният списък VIDEOS.');
     }
-    console.warn('YT: нито едно огледало не отговори — показва се резервният списък VIDEOS.');
   }
   loadYtVideos();
 
-  /* ═══════ БЛОГ ГАЛЕРИЯ ═══════
-     ✎ Статиите на блога: номер, категория (име + ключ за филтъра),
-     заглавие, кратко описание (HTML), дата · време и линк към страницата. */
   const BLOG_POSTS = [
     {
       num: "01", cat: "Преживяното", key: "beleshki",
@@ -532,7 +408,7 @@
     {
       num: "05", cat: "Фундаментът", key: "osnova",
       title: "Медитация върху хората, съдбата и волята",
-      desc: `<p class="persp-row-text">За корпорацията „Аз“, енергийните частици и волята — устройството за телепортиране между версиите на съдбата ни.</p>`,
+      desc: `<p class="persp-row-text">За корпорацията „Аз", енергийните частици и волята — устройството за телепортиране между версиите на съдбата ни.</p>`,
       meta: "септември 2025 · 10 мин четене",
       link: "blog-05-meditaciya-varhu-horata-sadbata-i-volyata.html"
     },
