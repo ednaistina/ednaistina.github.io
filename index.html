@@ -24,7 +24,7 @@
     <a href="#hero" class="nav-logo-wrap"><img src="images/logo.png" alt="Една Истина"></a>
     <a href="#inspiration" class="nav-link">Вдъхновение</a>
     <a href="#about" class="nav-link">За мен</a>
-    <a href="https://konsultacii.ednaistina.bg" class="nav-link ext" target="_blank" rel="noopener">Консултации ↗</a>
+    <a href="#contact" class="nav-link">Контакт</a>
     <button class="nav-hamburger" id="hamburger" aria-label="Меню"><span></span><span></span><span></span></button>
   </div>
   <div class="nav-drawer" id="nav-drawer">
@@ -35,6 +35,7 @@
     <a href="#inspiration" class="nav-link">Вдъхновение</a>
     <a href="#about" class="nav-link">За мен</a>
     <a href="#join" class="nav-link">Общност</a>
+    <a href="#contact" class="nav-link">Контакт</a>
   </div>
 </nav>
 
@@ -211,6 +212,26 @@
 </div></section>
 <hr class="horizon">
 
+<section id="contact"><div class="container">
+  <div class="fade-in">
+    <div class="section-label">Контакт</div>
+    <h2 class="section-heading">Един разговор може да промени посоката на много други.</h2>
+    <p class="section-intro">Въпрос, споделяне или интерес към бъдещите лични консултации — пиши ми директно оттук. Отговарям лично на всяко писмо.</p>
+  </div>
+  <div class="contact-form fade-in">
+    <div class="contact-row">
+      <input class="contact-input" type="text" id="c-name" placeholder="Твоето име">
+      <input class="contact-input" type="email" id="c-email" placeholder="твоят@имейл.bg">
+    </div>
+    <textarea class="contact-textarea" id="c-msg" rows="6" placeholder="Твоето съобщение…"></textarea>
+    <div class="contact-actions">
+      <button class="btn-primary" id="c-send" onclick="handleContact()">Изпрати</button>
+      <span class="contact-status" id="c-status"></span>
+    </div>
+  </div>
+</div></section>
+<hr class="horizon">
+
 <footer>
   <div class="footer-logo"><img src="images/logo.png" alt="Една Истина"></div>
   <div class="footer-links">
@@ -221,7 +242,7 @@
     <a href="#inspiration" class="footer-link">Вдъхновение</a><span class="footer-div">·</span>
     <a href="#about" class="footer-link">За мен</a><span class="footer-div">·</span>
     <a href="#join" class="footer-link">Общност</a><span class="footer-div">·</span>
-    <a href="https://konsultacii.ednaistina.bg" class="footer-link" target="_blank" rel="noopener">Консултации</a>
+    <a href="#contact" class="footer-link">Контакт</a>
   </div>
   <div class="footer-copy">© 2026 Една Истина</div>
 </footer>
@@ -263,8 +284,55 @@
   document.getElementById('q-prev').addEventListener('click',()=>show(cur-1));
   document.getElementById('q-next').addEventListener('click',()=>show(cur+1));
 
-  function handleJoin(){const i=document.getElementById('join-email');
-    if(i.value&&i.value.includes('@')){i.value='';i.placeholder='Вписан си. Благодаря.';i.disabled=true}}
+  const FORMSPREE = "https://formspree.io/f/xbdndvjo";
+
+  async function handleJoin(){
+    const i=document.getElementById('join-email'),b=document.querySelector('.join-btn');
+    if(!i.value||!i.value.includes('@'))return;
+    b.disabled=true;
+    try{
+      const res=await fetch(FORMSPREE,{
+        method:'POST',
+        headers:{'Accept':'application/json','Content-Type':'application/json'},
+        body:JSON.stringify({форма:'абонамент',email:i.value})
+      });
+      if(!res.ok)throw new Error();
+      i.value='';i.placeholder='Вписан си. Благодаря.';i.disabled=true;
+    }catch(e){
+      b.disabled=false;
+      i.value='';i.placeholder='Нещо се обърка — опитай пак.';
+    }
+  }
+
+  async function handleContact(){
+    const name=document.getElementById('c-name'),
+          email=document.getElementById('c-email'),
+          msg=document.getElementById('c-msg'),
+          btn=document.getElementById('c-send'),
+          st=document.getElementById('c-status');
+    if(!email.value.includes('@')||!msg.value.trim()){
+      st.textContent='Попълни имейл и съобщение.';return;
+    }
+    btn.disabled=true;st.textContent='Изпращам…';
+    try{
+      const res=await fetch(FORMSPREE,{
+        method:'POST',
+        headers:{'Accept':'application/json','Content-Type':'application/json'},
+        body:JSON.stringify({
+          форма:'контакт',
+          име:name.value,
+          email:email.value,
+          съобщение:msg.value
+        })
+      });
+      if(!res.ok)throw new Error();
+      name.value=email.value=msg.value='';
+      st.textContent='Изпратено. Благодаря — ще ти отговоря лично.';
+    }catch(e){
+      btn.disabled=false;
+      st.textContent='Нещо се обърка — опитай пак след малко.';
+    }
+  }
 
   const YT_CHANNEL_ID = "UCxNHus03IG17rvimM4IAXAg";
   const YT_API_KEY = "AIzaSyBpYP4NvpNfn9NrxLaXIEQttZ3r8RnHS9Y";
