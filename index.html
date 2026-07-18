@@ -384,6 +384,15 @@
     }
   ];
 
+  /* На тесен екран (≤760px) резюмето се вмъква в решетката точно НАД
+     избраната карта (акордеон), за да не се скролва обратно нагоре.
+     На десктоп се връща на мястото си над решетката. */
+  const MOBILE_Q=matchMedia('(max-width:760px)');
+  function placeHook(hookEl,gridEl,cardEl){
+    if(MOBILE_Q.matches&&cardEl)gridEl.insertBefore(hookEl,cardEl);
+    else gridEl.parentNode.insertBefore(hookEl,gridEl);
+  }
+
   const grid=document.getElementById('yt-grid'),hook=document.getElementById('hook');
   let YT_LIST=VIDEOS;
   function selectVideo(i){
@@ -392,7 +401,9 @@
     document.getElementById('hook-title').textContent=v.title;
     document.getElementById('hook-body').innerHTML=v.desc;
     document.getElementById('hook-cta').href=v.link;
-    grid.querySelectorAll('.yt-card').forEach((c,j)=>c.classList.toggle('selected',j===i));
+    const cards=grid.querySelectorAll('.yt-card');
+    cards.forEach((c,j)=>c.classList.toggle('selected',j===i));
+    placeHook(hook,grid,cards[i]);
     hook.classList.remove('swap');void hook.offsetWidth;hook.classList.add('swap');
   }
   function renderVideos(list){
@@ -443,6 +454,13 @@
     }
   }
   loadYtVideos();
+
+  /* при преминаване през 760px границата резюметата се местят на правилното място */
+  MOBILE_Q.addEventListener('change',()=>{
+    placeHook(hook,grid,grid.querySelector('.yt-card.selected'));
+    const bg=document.getElementById('bp-grid'),bh=document.getElementById('blog-hook');
+    if(bg&&bh)placeHook(bh,bg,bg.querySelector('.bp-card.selected'));
+  });
 
   const BLOG_POSTS = [
     {
@@ -532,7 +550,9 @@
     document.getElementById('bh-body').innerHTML=p.desc;
     document.getElementById('bh-meta').textContent=p.meta;
     document.getElementById('bh-cta').href=p.link;
-    bpGrid.querySelectorAll('.bp-card').forEach((c,j)=>c.classList.toggle('selected',j===i));
+    const cards=bpGrid.querySelectorAll('.bp-card');
+    cards.forEach((c,j)=>c.classList.toggle('selected',j===i));
+    placeHook(bHook,bpGrid,cards[i]);
     bHook.classList.remove('swap');void bHook.offsetWidth;bHook.classList.add('swap');
   }
   BLOG_POSTS.forEach((p,i)=>{
