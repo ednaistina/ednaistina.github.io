@@ -249,3 +249,6 @@
 .contact-actions{display:flex;align-items:center;gap:16px;margin-top:16px}
 .contact-status{font-size:13px;color:var(--ink-dim)}
 @media(max-width:760px){.contact-row{flex-direction:column}}
+
+/* ═══════ МОБИЛЕН АКОРДЕОН: резюмето вътре в решетката ═══════ */
+  .yt-grid > .persp-card.hook,.bp-grid > .persp-card.hook{grid-column:1/-1}
