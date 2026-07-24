@@ -407,7 +407,11 @@
     hook.classList.remove('swap');void hook.offsetWidth;hook.classList.add('swap');
   }
   function renderVideos(list){
-    YT_LIST=list;grid.innerHTML='';
+    YT_LIST=list;
+    /* ако резюмето е вътре в решетката (мобилен акордеон), първо го изваждаме —
+       иначе grid.innerHTML='' го изтрива заедно с картите */
+    if(hook.parentNode===grid)grid.parentNode.insertBefore(hook,grid);
+    grid.innerHTML='';
     list.forEach((v,i)=>{
       const el=document.createElement('div');
       el.className='yt-card';el.setAttribute('role','button');el.tabIndex=0;
